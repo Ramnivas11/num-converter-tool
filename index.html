@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="calculator">
+        <label id="">From</label>
+        <select name="dropdown" id="from-type" onchange="updateInputType(),clearInput()">
+            <option value="Decimal">Decimal</option>
+            <option value="Binary">Binary</option>
+            <option value="Octal">Octal</option>
+            <option value="Hexa-decimal">Hexa-decimal</option>
+        </select>
+        <label id="">To</label>
+        <select name="dropdown" id="to-type" onchange="clearInput()">
+            <option value="Decimal">Decimal</option>
+            <option value="Binary">Binary</option>
+            <option value="Octal">Octal</option>
+            <option value="Hexa-decimal">Hexa-decimal</option>
+        </select>
+        <input type="number" id="val" class="input-field" placeholder="Enter value">
+        <button onclick="main()" class="btn">Calculate</button>
+        
+        <h5 id="display" class="display-area"></h5>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

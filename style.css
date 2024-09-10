@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; 
+    padding: 20px;
+}
+
+
+.calculator {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+select, .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+select:focus, .input-field:focus {
+    border-color: #5d7890; 
+    outline: none;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #5d7890; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3d586a;
+    transform: scale(1.03);
+}
+
+.btn:active {
+    background-color: #2d4354;
+}
+
+
+.display-area {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eaeaea; 
+    border-radius: 5px;
+    color: #333;
+    border: 1px solid #bbb;
+}
+
+
+@media (max-width: 768px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    select, .input-field, .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .display-area {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+    }
+
+    select, .input-field, .btn {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .display-area {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
